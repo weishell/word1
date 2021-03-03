@@ -1,0 +1,62 @@
+一、NiFi概念
+NiFi用来处理数据集成场景的数据分发，BS结构的图形化。
+	1.高可用
+	2.高性能高并发
+	3.错误纠察
+	4.快速响应
+	5.兼容各种数据格式
+	6.安全性
+	7.方便迁移
+
+二、NiFi核心组件的概念
+1. FlowFile
+	attribute、content
+2. FlowFile Processor
+	处理FlowFile，及逆行逻辑判断、路由、转换等操作。
+3. Connection
+	连接处理器。连接不同的Processor，充当队列的角色。
+4. Flow Controller
+	代理角色，调度促进处理器流文件的交换。
+5. Process Group
+	包含了一组特定的Processor和Connection，组和组之间也可以进行连接和传输，组成新的大组。
+	
+NiFi优点：
+	1. 可视化
+	2. 吞吐量大
+	3. 高并发
+	4. 内聚和松耦合
+	5. 支持背压和压力释放机制
+	6. 错误处理很直观精确
+	7. 数据流动的整体流程，方便理解和跟踪
+
+
+三、NiFi架构
+1.WEB服务器
+	承载http请求和ControllerAPI接口服务
+2.流控制器（FlowController）
+	管理调度，提供线程
+3.Extensions（扩展）
+	基于JVM运行，使用Java来进行扩展
+4.FlowFile Reponsitory
+	FlowFile状态数据
+5.Content Reponsitory
+	FlowFile内容数据
+6.Provenance Reponsitory（源头存储库，事件存储库）
+	事件数据
+
+NiFi集群
+	零主模式集群
+	集群协调器
+		删除或者添加Node节点
+	主节点
+		运行不适合在集群中运行的任务（单节点任务）
+	zookeeper节点
+		故障转移
+		
+四、Nifi的性能
+	磁盘IO、CPU多线程、内存
+	
+五、NiFi关键特性
+	1.流管理
+	2.易用性
+	3.灵活的缩放模型

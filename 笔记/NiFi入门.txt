@@ -1,0 +1,29 @@
+一、NiFi的安装与启动
+	1.准备运行环境	VM虚拟机	jdk
+	2.下载安装包
+	3.修改配置
+	4.解压 tar -zxvf XX.tar.gz
+	5.启动	nifi-1.9.0/bin/nifi.sh start
+	IP:58080/infi
+
+二、了解NiFi处理器
+	设置、任务调度(重点)、属性(重点)、注释
+	
+三、应用场景
+	1.创建处理器：GetFile
+	2.配置处理器（熟悉了解处理器属性）
+	3.创建后续处理器：PutFile
+	4.配置PutFile（熟悉了解处理器属性）
+	5.连接GetFile和PutFile
+	
+四、NiFi处理器的类别（NiFi的功能）
+	数据转换、路由、数据库操作、属性提取、系统交互、数据提取、数据监听和发送、拆分聚合、HTTP
+	
+五、FlowFile属性
+	共同属性（是NiFi服务生成的，不能修改）、提取属性、添加自定义属性（UpdateAttribute）、属性路由（RouteOnAttribute）、表达式语言（${filename:toLower():contains('r')}）、NiFi表达式使用自定义属性
+	
+六、模版
+	实现数据流程的高内聚和松耦合，NiFi事件处理流程的快速备份与复用。
+
+七、NiFi监控
+	状态栏、组件展示栏、公告、数据来源：事件列表、事件详情、谱系图。

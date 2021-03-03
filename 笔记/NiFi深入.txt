@@ -1,0 +1,16 @@
+一、NiFi集群
+	安装：
+		1.conf/zookeeper.properties
+		2.state/zookeeper/myid
+		3.conf/nifi.properties
+		4.conf/state-management.xml
+	故障排除：logs/nifi-app.log
+	集群组件状态管理：conf/state-management.xml，conf/nifi.properties
+	管理节点：断开节点，卸载节点，删除节点，退役节点
+	流动选举：nifi.properties，选举的等待时间，选举的票数
+
+二、NiFi监控
+	状态栏、处理器面板、进程组面板、Sunmary、Provenance
+	
+三、NiFi连接与关系
+	连接（关系路由）、FlowFile过期时间、背压机制（FlowFile数量和大小、防止服务出现数据溢出）、负载均衡、优先级、先停止相关联处理器才能更新、弯曲连接
